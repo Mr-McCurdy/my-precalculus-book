@@ -1,0 +1,166 @@
+# Introduction to Precalculus
+
+> "Each problem that I solved became a rule which served afterwards to solve other problems."  
+> — *René Descartes*
+
+Precalculus is the essential bridge that transitions you from advanced algebra and trigonometry into the powerful world of calculus. By mastering functions, transformations, and essential theorems here, you’ll build the analytical foundation to tackle limits, derivatives, and integrals. Whether you are heading into science, engineering, economics, or data analytics, the skills you learn in Precalculus will broaden your perspective and problem-solving repertoire.
+
+## Why This Course Matters
+
+1. **Unifying Functions and Graphs**  
+   You’ll see polynomials, rational functions, exponentials, and trigonometric expressions in a single cohesive framework. Understanding how to shift, stretch, and combine them is a crucial skill in modeling real-world phenomena.
+
+2. **Laying Groundwork for Calculus**  
+   Much of calculus involves analyzing how functions change. Precalculus ensures you’re comfortable describing, manipulating, and interpreting those functions in preparation for rigorous rate-of-change analysis.
+
+3. **Analytical Thinking**  
+   The complexity of the problems in Precalculus encourages a more mature mathematical perspective, where each question may require multiple concepts or transformations.
+
+## A Short Theorem
+
+### Factor Theorem {#thm-factor}
+
+**Statement:**  
+If a polynomial \(P(x)\) is divided by \((x - a)\), then the remainder is \(P(a)\). Consequently, if \(P(a) = 0\), then \((x - a)\) is a factor of \(P(x)\).
+
+**Why It Matters:**  
+This theorem links the concept of polynomial roots to factorization, making it easier to simplify polynomials and solve polynomial equations—two major tasks you’ll handle repeatedly in this course.
+
+## A Sample Quadratic
+
+Consider the quadratic function below, which we will use for illustration throughout the text:
+
+$$
+f(x) = x^2 - 4x + 3
+(\#eq:myQuadratic)
+$$
+
+- It factors nicely into \((x - 1)(x - 3)\).
+- The graph is a parabola opening upwards.
+- Its roots are \(x=1\) and \(x=3\), demonstrating the Factor Theorem (see [@thm-factor]).
+
+```{r chunk-label, echo = FALSE, fig.cap = "Quadratic function \\(f(x) = x^2 - 4x + 3\\) with roots at \\(x=1\\) and \\(x=3\\).", fig.width = 6, fig.height = 9}
+
+# Create a sequence of x-values and their corresponding y-values
+x_vals <- seq(-1, 5, length.out = 250)
+y_vals <- x_vals^2 - 4*x_vals + 3
+
+###############################
+## Set up general plot parameters
+###############################
+par(
+  bg        = "white",     # overall figure background
+  fg        = "gray40",    # color for the plot lines, axes, etc.
+  col.main  = "black",     # main title color
+  col.axis  = "gray40",    # axis text/ticks color
+  col.lab   = "black",     # axis label color
+  bty       = "n"          # no outer box drawn around the figure
+)
+
+###############################
+## Create the plot window without drawing default axes
+###############################
+plot(
+  x_vals, y_vals,
+  type      = "n",
+  xlim      = c(-1, 5),
+  ylim      = c(-1, 8),
+  xlab      = "",    # We'll manually add the axis labels
+  ylab      = "",
+  axes      = FALSE, # We'll manually draw the axes
+  main      = expression(paste("Plot of ", italic(f), "(", italic(x), ") = ", x^2, " - 4x + 3"))
+)
+
+###############################
+## Add a light gray grid in the background
+###############################
+grid(
+  nx      = NULL,       # default number of vertical lines
+  ny      = NULL,       # default number of horizontal lines
+  col     = "gray80",   # color for the grid lines
+  lty     = "dotted",   # line type
+  lwd     = 1
+)
+
+###############################
+## Draw the coordinate axes through (0,0)
+###############################
+
+# The x-axis at y=0
+axis(
+  side      = 1,         # bottom axis
+  pos       = 0,         # place it at y=0
+  lwd       = 1.5,       # thickness for axis line
+  lwd.ticks = 1,         # thickness for ticks
+  col.axis  = "gray20",  # color for axis tick labels
+  col.ticks = "gray20",
+  col       = "gray20",  # axis line color
+  las       = 1          # orientation of labels
+)
+
+# The y-axis at x=0
+axis(
+  side      = 2,         # left axis
+  pos       = 0,         # place it at x=0
+  lwd       = 1.5,
+  lwd.ticks = 1,
+  col.axis  = "gray20",
+  col.ticks = "gray20",
+  col       = "gray20",
+  las       = 1
+)
+
+###############################
+## Axis labels
+###############################
+#mtext(
+#  side = 1,
+#  line = 2.5,
+#  expression(italic(x)),
+#  col = "black"
+#)
+
+#mtext(
+#  side = 2,
+#  line = 2.5,
+#  expression(italic(f(x))),
+#  col = "black"
+#)
+#
+###############################
+## Draw the function curve in grayscale
+###############################
+lines(x_vals, y_vals, lwd = 2, col = "gray20")
+
+###############################
+## Mark the roots with points, but no text labels
+###############################
+root_x <- c(1, 3)
+root_y <- c(0, 0)
+points(root_x, root_y, pch = 19, col = "gray20")
+```
+
+## What to Expect
+
+1. **Exercises & Examples:**  
+   Each chapter features a range of problems, from routine drills to multi-step challenges, ensuring you can practice systematically.
+
+2. **Conceptual Insights:**  
+   Beyond algebraic manipulations, you’ll get intuitive glimpses into *why* these methods work and *how* they generalize.
+
+3. **Applications:**  
+   Scenarios from various fields—sciences, economics, or even everyday life—will show the versatility of these topics and spark curiosity about future applications in calculus.
+
+## Looking Ahead
+
+Throughout this book, we’ll revisit main ideas like:
+- **Domain & Range** to clarify valid inputs and possible outputs.
+- **Transformations** (translations, stretches, reflections) for advanced modeling.
+- **Inverse Functions** for understanding how to “undo” operations—essential in exponential and logarithmic contexts.
+- **Trigonometric Identities & Graphs** for periodic phenomena.
+
+By the end, you will be well-versed in not just solving equations but also interpreting and analyzing the behaviors of many function types—critical expertise for success in calculus. 
+
+---
+
+Continue on to the next chapter, where we dive into the fundamentals of **Functions and Their Graphs**. You’ll learn to identify common function families, work with domain/range, and create transformations to model an array of real-world situations.
