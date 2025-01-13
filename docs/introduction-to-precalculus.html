@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction to Precalculus | A Minimal Book Example</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction to Precalculus | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction to Precalculus | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Yihui Xie" />
+
+
+<meta name="date" content="2025-01-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="literature.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html"><i class="fa fa-check"></i><b>2</b> Introduction to Precalculus</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#why-this-course-matters"><i class="fa fa-check"></i><b>2.1</b> Why This Course Matters</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#a-short-theorem"><i class="fa fa-check"></i><b>2.2</b> A Short Theorem</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#thm-factor"><i class="fa fa-check"></i><b>2.2.1</b> Factor Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#a-sample-quadratic"><i class="fa fa-check"></i><b>2.3</b> A Sample Quadratic</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#what-to-expect"><i class="fa fa-check"></i><b>2.4</b> What to Expect</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-precalculus.html"><a href="introduction-to-precalculus.html#looking-ahead"><i class="fa fa-check"></i><b>2.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>4.1</b> math example</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-precalculus" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction to Precalculus<a href="introduction-to-precalculus.html#introduction-to-precalculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p>“Each problem that I solved became a rule which served afterwards to solve other problems.”<br />
+— <em>René Descartes</em></p>
+</blockquote>
+<p>Precalculus is the essential bridge that transitions you from advanced algebra and trigonometry into the powerful world of calculus. By mastering functions, transformations, and essential theorems here, you’ll build the analytical foundation to tackle limits, derivatives, and integrals. Whether you are heading into science, engineering, economics, or data analytics, the skills you learn in Precalculus will broaden your perspective and problem-solving repertoire.</p>
+<div id="why-this-course-matters" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Why This Course Matters<a href="introduction-to-precalculus.html#why-this-course-matters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Unifying Functions and Graphs</strong><br />
+You’ll see polynomials, rational functions, exponentials, and trigonometric expressions in a single cohesive framework. Understanding how to shift, stretch, and combine them is a crucial skill in modeling real-world phenomena.</p></li>
+<li><p><strong>Laying Groundwork for Calculus</strong><br />
+Much of calculus involves analyzing how functions change. Precalculus ensures you’re comfortable describing, manipulating, and interpreting those functions in preparation for rigorous rate-of-change analysis.</p></li>
+<li><p><strong>Analytical Thinking</strong><br />
+The complexity of the problems in Precalculus encourages a more mature mathematical perspective, where each question may require multiple concepts or transformations.</p></li>
+</ol>
+</div>
+<div id="a-short-theorem" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> A Short Theorem<a href="introduction-to-precalculus.html#a-short-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="thm-factor" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Factor Theorem<a href="introduction-to-precalculus.html#thm-factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Statement:</strong><br />
+If a polynomial <span class="math inline">\(P(x)\)</span> is divided by <span class="math inline">\((x - a)\)</span>, then the remainder is <span class="math inline">\(P(a)\)</span>. Consequently, if <span class="math inline">\(P(a) = 0\)</span>, then <span class="math inline">\((x - a)\)</span> is a factor of <span class="math inline">\(P(x)\)</span>.</p>
+<p><strong>Why It Matters:</strong><br />
+This theorem links the concept of polynomial roots to factorization, making it easier to simplify polynomials and solve polynomial equations—two major tasks you’ll handle repeatedly in this course.</p>
+</div>
+</div>
+<div id="a-sample-quadratic" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> A Sample Quadratic<a href="introduction-to-precalculus.html#a-sample-quadratic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Consider the quadratic function below, which we will use for illustration throughout the text:</p>
+<p><span class="math display" id="eq:myQuadratic">\[
+f(x) = x^2 - 4x + 3
+\tag{2.1}
+\]</span></p>
+<ul>
+<li>It factors nicely into <span class="math inline">\((x - 1)(x - 3)\)</span>.</li>
+<li>The graph is a parabola opening upwards.</li>
+<li>Its roots are <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=3\)</span>, demonstrating the Factor Theorem (see <span class="citation">(<a href="#ref-thm-factor"><strong>thm-factor?</strong></a>)</span>).</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:chunk-label"></span>
+<img src="MyBook_files/figure-html/chunk-label-1.png" alt="Quadratic function \(f(x) = x^2 - 4x + 3\) with roots at \(x=1\) and \(x=3\)." width="576" />
+<p class="caption">
+Figure 2.1: Quadratic function <span class="math inline">\(f(x) = x^2 - 4x + 3\)</span> with roots at <span class="math inline">\(x=1\)</span> and <span class="math inline">\(x=3\)</span>.
+</p>
+</div>
+</div>
+<div id="what-to-expect" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> What to Expect<a href="introduction-to-precalculus.html#what-to-expect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Exercises &amp; Examples:</strong><br />
+Each chapter features a range of problems, from routine drills to multi-step challenges, ensuring you can practice systematically.</p></li>
+<li><p><strong>Conceptual Insights:</strong><br />
+Beyond algebraic manipulations, you’ll get intuitive glimpses into <em>why</em> these methods work and <em>how</em> they generalize.</p></li>
+<li><p><strong>Applications:</strong><br />
+Scenarios from various fields—sciences, economics, or even everyday life—will show the versatility of these topics and spark curiosity about future applications in calculus.</p></li>
+</ol>
+</div>
+<div id="looking-ahead" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Looking Ahead<a href="introduction-to-precalculus.html#looking-ahead" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Throughout this book, we’ll revisit main ideas like:
+- <strong>Domain &amp; Range</strong> to clarify valid inputs and possible outputs.
+- <strong>Transformations</strong> (translations, stretches, reflections) for advanced modeling.
+- <strong>Inverse Functions</strong> for understanding how to “undo” operations—essential in exponential and logarithmic contexts.
+- <strong>Trigonometric Identities &amp; Graphs</strong> for periodic phenomena.</p>
+<p>By the end, you will be well-versed in not just solving equations but also interpreting and analyzing the behaviors of many function types—critical expertise for success in calculus.</p>
+<hr />
+<p>Continue on to the next chapter, where we dive into the fundamentals of <strong>Functions and Their Graphs</strong>. You’ll learn to identify common function families, work with domain/range, and create transformations to model an array of real-world situations.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["MyBook.pdf", "MyBook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

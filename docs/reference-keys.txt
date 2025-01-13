@@ -1,0 +1,17 @@
+eq:myQuadratic
+fig:chunk-label
+prerequisites
+introduction-to-precalculus
+why-this-course-matters
+a-short-theorem
+thm-factor
+a-sample-quadratic
+what-to-expect
+looking-ahead
+literature
+methods
+math-example
+applications
+example-one
+example-two
+final-words
